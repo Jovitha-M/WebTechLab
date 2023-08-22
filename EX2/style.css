@@ -1,0 +1,44 @@
+.queen {
+  position: absolute;
+  top: 150px;
+  left: 65px;
+}
+.pop {
+  position: absolute;
+  top: 28px;
+  left: 195px;
+}
+.war {
+  position: absolute;
+  top: 150px;
+  left: 420px;
+}
+.srilanka {
+  position: absolute;
+  top: 360px;
+  left: 60px;
+}
+.assasination {
+  position: absolute;
+  top: 480px;
+  left: 240px;
+}
+.fifa {
+  position: absolute;
+  top: 360px;
+  left: 420px;
+}
+.circle {
+  position: absolute;
+  top: 20px;
+  left: 800px;
+  width: 650px;
+  height: 650px;
+  border-radius: 725px;
+  border: 10px solid red;
+  background: black;
+  line-height: 650px;
+  text-align: center;
+  font-size: 50px;
+  color: red;
+}
