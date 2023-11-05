@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Encode Sans"
+      rel="stylesheet"
+    />
+    <title>Feedback Form</title>
+    <style>
+      body {
+        font-family: "Encode Sans";
+        background-color: hsla(221, 73%, 63%, 0.82);
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+      select,
+      input[type="range"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      hr {
+        margin: 20px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+      }
+      .radiodiv {
+        display: flex;
+        align-items: center;
+      }
+      .radioop {
+        margin-right: 20px;
+        color: #555;
+      }
+      .btndiv {
+        text-align: center;
+      }
+      input[type="submit"],
+      input[type="button"] {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover,
+      input[type="button"]:hover {
+        background-color: #555;
+      }
+      hr {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>FEEDBACK FORM</h1>
+      <p>
+        Please complete the following form and help us improve our customer
+        experience
+      </p>
+      <hr />
+      <form
+        name="feedbackForm"
+        action="mycookie"
+        method="post"
+        onsubmit="validateForm()"
+      >
+        <ol>
+          <li>
+            <div><b>Name:</b> <input type="text" name="uname" required /></div>
+          </li>
+          <li>
+            <label for="gender">Gender:</label>
+            <div class="radiodiv">
+              <label class="radioop"
+                ><input
+                  type="radio"
+                  name="gender"
+                  value="male"
+                  required
+                />Male</label
+              >
+              <label class="radioop"
+                ><input
+                  type="radio"
+                  name="gender"
+                  value="female"
+                  required
+                />Female</label
+              >
+            </div>
+          </li>
+          <li>
+            <label for="age">Age:</label>
+            <div class="radiodiv">
+              <label class="radioop"
+                ><input
+                  type="radio"
+                  name="age"
+                  value="Under 20"
+                  required
+                />Under 20</label
+              >
+              <label class="radioop"
+                ><input
+                  type="radio"
+                  name="age"
+                  value="20-40"
+                  required
+                />20-40</label
+              >
+              <label class="radioop"
+                ><input
+                  type="radio"
+                  name="age"
+                  value="40-50"
+                  required
+                />40-50</label
+              >
+              <label class="radioop"
+                ><input type="radio" name="age" value="Over 50" required />Over
+                50</label
+              >
+            </div>
+          </li>
+          <li>
+            <label
+              >To what extent do you agree with the following statements
+              referring to your experience of the website?</label
+            >
+            <ol type="i">
+              <li>
+                <label
+                  >Website's layout and design are visually appealing and easy
+                  to navigate</label
+                >
+                <div class="radiodiv">
+                  <label class="radioop"
+                    ><input
+                      type="radio"
+                      name="speed"
+                      value="Strongly Disagree"
+                      required
+                    />Strongly Disagree</label
+                  >
+                  <label class="radioop"
+                    ><input
+                      type="radio"
+                      name="speed"
+                      value="Disagree"
+                      required
+                    />Disagree</label
+                  >
+                  <label class="radioop"
+                    ><input
+                      type="radio"
+                      name="speed"
+                      value="Agree"
+                      required
+                    />Agree</label
+                  >
+                  <label class="radioop"
+                    ><input
+                      type="radio"
+                      name="speed"
+                      value="Strongly Agree"
+                      required
+                    />Strongly Agree</label
+                  >
+                </div>
+              </li>
+              <li>
+                <label>User-contributed stories and comments are present</label>
+                <div class="radiodiv">
+                  <label class="radioop"
+                    ><input
+                      type="radio"
+                      name="taste"
+                      value="Strongly Disagree"
+                      required
+                    />Strongly Disagree</label
+                  >
+                  <label class="radioop"
+                    ><input
+                      type="radio"
+                      name="taste"
+                      value="Disagree"
+                      required
+                    />Disagree</label
+                  >
+                  <label class="radioop"
+                    ><input
+                      type="radio"
+                      name="taste"
+                      value="Agree"
+                      required
+                    />Agree</label
+                  >
+                  <label class="radioop"
+                    ><input
+                      type="radio"
+                      name="taste"
+                      value="Strongly Agree"
+                      required
+                    />Strongly Agree</label
+                  >
+                </div>
+              </li>
+              <li>
+                <label
+                  >The content moderation system ensures that the information on
+                  the website is accurate and relevant</label
+                >
+                <div class="radiodiv">
+                  <label class="radioop"
+                    ><input
+                      type="radio"
+                      name="price"
+                      value="Strongly Disagree"
+                      required
+                    />Strongly Disagree</label
+                  >
+                  <label class="radioop"
+                    ><input
+                      type="radio"
+                      name="price"
+                      value="Disagree"
+                      required
+                    />Disagree</label
+                  >
+                  <label class="radioop"
+                    ><input
+                      type="radio"
+                      name="price"
+                      value="Agree"
+                      required
+                    />Agree</label
+                  >
+                  <label class="radioop"
+                    ><input
+                      type="radio"
+                      name="price"
+                      value="Strongly Agree"
+                      required
+                    />Strongly Agree</label
+                  >
+                </div>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <label for="rate">How would you rate our contents?</label>
+            <div class="radiodiv">
+              <label class="radioop"
+                ><input type="radio" name="rate" value="1" required />1</label
+              >
+              <label class="radioop"
+                ><input type="radio" name="rate" value="2" required />2</label
+              >
+              <label class="radioop"
+                ><input type="radio" name="rate" value="3" required />3</label
+              >
+              <label class="radioop"
+                ><input type="radio" name="rate" value="4" required />4</label
+              >
+              <label class="radioop"
+                ><input type="radio" name="rate" value="5" required />5</label
+              >
+            </div>
+          </li>
+          <li>
+            <label for="feedback">Feedback to improve the website?</label>
+            <textarea
+              id="feedback"
+              name="feedback"
+              rows="4"
+              required
+            ></textarea>
+          </li>
+        </ol>
+        <div class="btndiv">
+          <input type="submit" value="Submit Feedback" />
+          <input type="button" value="Cancel" onclick="cancelFeedback()" />
+        </div>
+      </form>
+    </div>
+    <script>
+      function validateForm() {
+        alert("Your response have been saved!");
+      }
+
+      function cancelFeedback() {
+        var confirmCancel = confirm(
+          "Are you sure you want to cancel the feedback?"
+        );
+        if (confirmCancel) {
+          window.location.href = "home.html";
+        }
+      }
+    </script>
+  </body>
+</html>
