@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Special Events Of the Year</title>
+    <style>
+      .top-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 15%;
+        background-color: hsla(221, 73%, 63%, 0.82);
+        border: 2px solid black;
+      }
+
+      .dashboard-container {
+        position: fixed;
+        top: 15%;
+        left: 0;
+        width: 23%;
+        height: 85%;
+        background-color: hsla(221, 73%, 63%, 0.82);
+        border: 2px solid black;
+        border-radius: 0px 40px 40px 0px;
+      }
+
+      .right-input-container {
+        width: 73%;
+        height: 78%;
+        border: 2px solid black;
+        border-radius: 50px;
+        background-color: hsla(221, 73%, 63%, 0.82);
+        position: fixed;
+        top: 19%;
+        left: 25%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="top-container">
+      <iframe src="top.html" name="header" height="100%" width="100%"></iframe>
+    </div>
+
+    <div class="dashboard-container">
+      <iframe
+        src="left.html"
+        name="menu"
+        width="100%"
+        height="100%"
+        style="border-radius: 50px"
+      ></iframe>
+    </div>
+
+    <div class="right-input-container">
+      <iframe
+        name="right-input-space"
+        width="100%"
+        height="100%"
+        style="border-radius: 50px"
+      ></iframe>
+    </div>
+  </body>
+</html>

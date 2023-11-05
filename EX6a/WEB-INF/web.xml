@@ -1,0 +1,12 @@
+
+<web-app>
+    <servlet>
+        <servlet-name>logincookie</servlet-name>
+        <servlet-class>login</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>logincookie</servlet-name>
+        <url-pattern>/logincookie</url-pattern>
+    </servlet-mapping>
+</web-app>

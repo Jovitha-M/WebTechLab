@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Encode Sans"
+      rel="stylesheet"
+    />
+    <title>Contact Us</title>
+    <style>
+      body {
+        font-family: 'Encode Sans';
+        background-color: hsla(221, 73%, 63%, 0.82);
+        margin: 0;
+        padding: 0;
+        background-image: url("contactbg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .container {
+        max-width: 500px;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        text-align: center;
+        color: black;
+      }
+
+      form {
+        margin-top: 20px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+        color: black;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea {
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      textarea {
+        height: 70px;
+      }
+
+      input[type="submit"] {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #555;
+      }
+
+      .contact-info {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Contact Us</h1>
+      <form
+        action="contactservlet"
+        method="get"
+        onsubmit="return validateForm()"
+      >
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required />
+
+        <label for="mobile">Mobile:</label>
+        <input type="tel" id="mobile" name="mobile" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <div style="text-align: center">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+
+      <div class="contact-info">
+        You can reach out to us at:
+        <pre
+          style="
+            color: rgb(179, 53, 53);
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+          "
+        >
+customercare@events.com</pre
+        >
+    </div>
+    <script>
+      function validateForm() {
+        var name = document.getElementById("name").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var city = document.getElementById("city").value.trim();
+        var mobile = document.getElementById("mobile").value.trim();
+        var message = document.getElementById("message").value;
+
+        if (name.length < 3) {
+          alert("Please enter a valid name.");
+          document.getElementById("name").focus();
+          return false;
+        }
+
+        if (!isValidEmail(email)) {
+          alert("Please enter a valid email address.");
+          document.getElementById("email").focus();
+          return false;
+        }
+        if (!/^\d{10}$/.test(mobile)) {
+          alert("Please enter a valid 10-digit phone number");
+          document.getElementById("mobile").focus();
+          return false;
+        }
+        if (mobile.charAt(0) == "0") {
+          alert("Phone number cannot start with 0");
+          document.getElementById("mobile").focus();
+          return false;
+        }
+
+        if (message === "") {
+          alert("Please enter your message.");
+          document.getElementById("message").focus();
+          return false;
+        }
+        if (message.length <= 20) {
+          alert("Your message is too short");
+          document.getElementById("message").focus();
+          return false;
+        }
+
+        if (message.length >= 500) {
+          alert("Your message is too long");
+          document.getElementById("message").focus();
+          return false;
+        }
+      }
+
+      function isValidEmail(email) {
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return emailPattern.test(email);
+      }
+    </script>
+  </body>
+</html>

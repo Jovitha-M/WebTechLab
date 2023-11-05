@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Month Wise Events</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Encode Sans"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Encode Sans";
+      }
+
+      .container {
+        display: grid;
+        width: 90%;
+        margin: 40px auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+      }
+
+      .front img {
+        width: 100%;
+        height: 180px;
+        border-radius: 10px;
+      }
+
+      .container1 {
+        position: relative;
+      }
+
+      .front h2 {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+      }
+
+      .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        color: black;
+        padding: 15px;
+        transform: perspective(600px) rotateY(180deg);
+        transition: transform 0.5s linear 0s;
+        backface-visibility: hidden;
+        border-radius: 10px;
+      }
+
+      .front {
+        color: black;
+        transform: perspective(600px) rotateY(0deg);
+        transition: transform 0.5s linear 0s;
+      }
+
+      .container1:hover > .front {
+        transform: perspective(600px) rotateY(-180deg);
+        cursor: pointer;
+      }
+
+      .container1:hover > .back {
+        transform: perspective(600px) rotateY(0deg);
+        cursor: pointer;
+      }
+
+      @media (max-width: 800px) {
+        .container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 500px) {
+        .container {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 style="color: black">2023 MONTH-WISE EVENTS</h1>
+    <div class="container">
+      <div class="container1">
+        <div class="front">
+          <img src="/images/jan.png" />
+        </div>
+        <div class="back">
+          <p>Halley’s</p>
+        </div>
+      </div>
+      <div class="container1">
+        <div class="front">
+          <img src="/images/feb.png" />
+        </div>
+        <div class="back">
+          <p>
+            During the first few months of the year, the two brightest planets
+            will
+          </p>
+        </div>
+      </div>
+      <div class="container1">
+        <div class="front">
+          <img src="/images/mar.png" />
+        </div>
+        <div class="back">
+          <p>Meteor showers occur when the Earth passes through debris left</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container1">
+        <div class="front">
+          <img src="/images/april.png" />
+        </div>
+        <div class="back">
+          <p>
+            This shower is known for its fast meteors that leave long, glowing
+          </p>
+        </div>
+      </div>
+      <div class="container1">
+        <div class="front">
+          <img src="/images/may.png" />
+        </div>
+        <div class="back">
+          <p>
+            The northern lights, or the aurora borealis, are beautiful dancing
+          </p>
+        </div>
+      </div>
+      <div class="container1">
+        <div class="front">
+          <img src="/images/jun.png" />
+        </div>
+        <div class="back">
+          <p>
+            The Perseid meteor shower is one of the best of the year. Bright,.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container1">
+        <div class="front">
+          <img src="/images/jul.png" />
+        </div>
+        <div class="back">
+          <p>
+            In mid-October, an annular solar eclipse will be visible from the
+          </p>
+        </div>
+      </div>
+      <div class="container1">
+        <div class="front">
+          <img src="/images/aug.png" />
+        </div>
+        <div class="back">
+          <p>
+            The Ursids meteor shower is active annually between December 17 and
+          </p>
+        </div>
+      </div>
+      <div class="container1">
+        <div class="front">
+          <img src="/images/sep.png" />
+        </div>
+        <div class="back">
+          <p>
+            Those looking at the sky on the night of August 31 may notice that
+          </p>
+        </div>
+      </div>
+      <div class="container1">
+        <div class="front">
+          <img src="/images/oct.png" />
+        </div>
+        <div class="back">
+          <p>
+            Those looking at the sky on the night of August 31 may notice that
+          </p>
+        </div>
+      </div>
+      <div class="container1">
+        <div class="front">
+          <img src="/images/nov.png" />
+        </div>
+        <div class="back">
+          <p>
+            Those looking at the sky on the night of August 31 may notice that
+          </p>
+        </div>
+      </div>
+      <div class="container1">
+        <div class="front">
+          <img src="/images/dec.png" />
+        </div>
+        <div class="back">
+          <p>
+            Those looking at the sky on the night of August 31 may notice that
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
