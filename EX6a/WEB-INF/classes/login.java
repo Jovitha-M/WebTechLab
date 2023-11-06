@@ -15,10 +15,8 @@ public class login extends HttpServlet {
         pwriter.println("h3 { font-size: 35px; }");
         pwriter.println("p { font-size: 25px; }");
         pwriter.println("</style></head><body>");
-        
         pwriter.print("<h3>Welcome back " + in_data + "</h3>");
         pwriter.println("<br /> <p>Login Successful!</p>");
-        
         pwriter.println("</body></html>");
         pwriter.close();
     } catch(Exception exp) {
