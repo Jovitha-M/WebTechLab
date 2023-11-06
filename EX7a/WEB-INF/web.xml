@@ -1,0 +1,22 @@
+
+<web-app>
+    <servlet>
+        <servlet-name>login_check</servlet-name>
+        <servlet-class>logindb</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>login_check</servlet-name>
+        <url-pattern>/login_check</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>signup_check</servlet-name>
+        <servlet-class>signupdb</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>signup_check</servlet-name>
+        <url-pattern>/signup_check</url-pattern>
+    </servlet-mapping>
+</web-app>

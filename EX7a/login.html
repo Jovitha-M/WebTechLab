@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Encode Sans"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Encode Sans";
+        background-color: hsla(221, 73%, 63%, 0.82);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      h2 {
+        text-align: center;
+        color: black;
+      }
+
+      form {
+        margin-top: 20px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+        color: black;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid black;
+        border-radius: 50px;
+      }
+
+      textarea {
+        height: 150px;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      button[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #555;
+      }
+    </style>
+
+    <script>
+      function validateForm() {
+        var password = document.forms["loginForm"]["password"].value;
+        if (password.length < 8) {
+          alert("Password should be at least 8 characters long.");
+          return false;
+        }
+        if (!splchar(password)) {
+          alert("Password should contain at least one special character.");
+          return false;
+        }
+        return true;
+      }
+
+      function splchar(password) {
+        var specialCharacters = '!@#$%^&*(),.?":{}|<>';
+        for (var i = 0; i < password.length; i++) {
+          if (specialCharacters.includes(password[i])) {
+            return true;
+          }
+        }
+        return false;
+      }
+    </script>
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <form
+        name="loginForm"
+        action="login_check"
+        method="post"
+        onsubmit="return validateForm()"
+      >
+        <h2>Login</h2>
+        <label for="name"><b>Username:</b></label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter Username"
+          name="uname"
+          autocomplete="off"
+          required
+        />
+        <br />
+        <label for="password"><b>Password:</b></label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter Password"
+          name="password"
+          autocomplete="off"
+          required
+        />
+        <br />
+        <div class="button-container">
+          <button type="submit" name="action" value="Login">Login</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
