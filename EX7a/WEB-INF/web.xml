@@ -19,4 +19,14 @@
         <servlet-name>signup_check</servlet-name>
         <url-pattern>/signup_check</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>change_password</servlet-name>
+        <servlet-class>passworddb</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>change_password</servlet-name>
+        <url-pattern>/change_password</url-pattern>
+    </servlet-mapping>
 </web-app>

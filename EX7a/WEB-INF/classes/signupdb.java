@@ -31,22 +31,18 @@ public class signupdb extends HttpServlet{
             pstmt.setString(4, mobile);
             pstmt.executeUpdate();
             out.println("<br /> <h3>Signup Successful!</h3>");
-            String sql = "SELECT * FROM signup_check WHERE username = ? AND password = ? AND mobile = ? AND email = ?";
+            String sql = "SELECT * FROM signup_check WHERE username = ? AND password = ?";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, name);
             pstmt.setString(2, password);
-            pstmt.setString(3, mobile);
-            pstmt.setString(4, email);
             ResultSet rs = pstmt.executeQuery();
             out.println("<html><body><p>Data Inserted:</p>");
             while(rs.next())
             {
             String uname = rs.getString("username");
             String mail = rs.getString("email");
-            int no = rs.getInt("mobile");;
             out.println("<p> username: " + uname + "<br>");
-            out.println("Email: " + mail + "<br>");
-            out.println("Mobile number: " + no + "<br></p>");            
+            out.println("Email: " + mail + "<br>");         
             }
             out.println("</body></html>");
             rs.close();
