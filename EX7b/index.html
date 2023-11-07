@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Online News Quiz</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Encode Sans"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Encode Sans";
+        background-color: hsla(221, 73%, 63%, 0.82);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      form {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 50px;
+      }
+      h2 {
+        text-align: center;
+        color: black;
+      }
+      p {
+        font-weight: bold;
+        color: hsla(221, 73%, 63%, 0.82);
+      }
+      input[type="submit"] {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        border: none;
+        border-radius: 50px;
+        background-color: hsla(221, 73%, 63%, 0.82);
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+      li {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="exam_result" method="post">
+      <h2>WELCOME TO THE NEWS QUIZ!</h2>
+      <p>Question 1: Who is the current President of the United States?</p>
+      <input type="radio" name="answer1" value="Joe Biden" required /> Joe Biden
+      <input type="radio" name="answer1" value="Donald Trump" required /> Donald
+      Trump
+      <input type="radio" name="answer1" value="Barack Obama" required /> Barack
+      Obama
+      <input type="radio" name="answer1" value="George W. Bush" required />
+      George W. Bush<br />
+      <p>Question 2: Which country hosted the 2020 Summer Olympics?</p>
+      <input type="radio" name="answer2" value="Japan" required /> Japan
+      <input type="radio" name="answer2" value="China" required /> China
+      <input type="radio" name="answer2" value="Brazil" required /> Brazil
+      <input type="radio" name="answer2" value="United States" required />
+      United States<br />
+      <p>Question 3: Who won the Nobel Peace Prize in 2021?</p>
+      <input type="radio" name="answer3" value="Malala Yousafzai" required />
+      Malala Yousafzai
+      <input type="radio" name="answer3" value="Greta Thunberg" required />
+      Greta Thunberg
+      <input type="radio" name="answer3" value="Joe Biden" required /> Joe Biden
+      <input type="radio" name="answer3" value="Kamala Harris" required />
+      Kamala Harris<br />
+      <p>Question 4: What is the capital of France?</p>
+      <input type="radio" name="answer4" value="London" required /> London
+      <input type="radio" name="answer4" value="Berlin" required /> Berlin
+      <input type="radio" name="answer4" value="Paris" required /> Paris
+      <input type="radio" name="answer4" value="Rome" required /> Rome<br />
+      <p>Question 5: Who is the CEO of Facebook (Meta)?</p>
+      <input type="radio" name="answer5" value="Mark Zuckerberg" required />
+      Mark Zuckerberg
+      <input type="radio" name="answer5" value="Jeff Bezos" required /> Jeff
+      Bezos <input type="radio" name="answer5" value="Tim Cook" required /> Tim
+      Cook
+      <input type="radio" name="answer5" value="Sundar Pichai" required />
+      Sundar Pichai<br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
