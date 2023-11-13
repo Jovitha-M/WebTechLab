@@ -3,7 +3,6 @@
         <servlet-name>exam_result</servlet-name>
         <servlet-class>exam</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>exam_result</servlet-name>
         <url-pattern>/exam_result</url-pattern>

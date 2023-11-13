@@ -10,7 +10,7 @@ public class login2 extends HttpServlet {
                 pwriter.println("<html><head><style>");
                 pwriter.println("body { text-align: center; }");
                 pwriter.println("h3 { font-size: 35px; }");
-                pwriter.println("p { font-size: 25px; }"); // You can adjust the font size as needed
+                pwriter.println("p { font-size: 25px; }"); 
                 pwriter.println("</style></head><body>");        
                 HttpSession session=request.getSession(false);  
                 String n=(String)session.getAttribute("login_name");  

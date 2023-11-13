@@ -1,7 +1,6 @@
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
-
 public class login1 extends HttpServlet {
    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
      try {
@@ -19,8 +18,7 @@ public class login1 extends HttpServlet {
         pwriter.println("<br /> <p>Login Successful!</p>");
         pwriter.print("<a href='loginurl2?uname="+in_data+"'>Go to the next page</a>");  
         pwriter.println("</body></html>");  
-        pwriter.print("</form>");  
-        
+        pwriter.print("</form>");      
         pwriter.close();
     } catch(Exception exp) {
        System.out.println(exp);

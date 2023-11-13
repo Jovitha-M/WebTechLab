@@ -5,10 +5,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
-
 public class exam extends HttpServlet {
     private int counter = 0;
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -22,8 +20,7 @@ public class exam extends HttpServlet {
                     String correct_ans = rs.getString("answer");
                     if (user_ans != null && user_ans.equals(correct_ans)) {
                         counter++;
-                    }
-                }
+                    }}
                 rs.close();
                 stmt.close();
             }
@@ -31,7 +28,6 @@ public class exam extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.println("<html><body style='font-family: Arial, sans-serif; background-color: cornsilk; text-align: center; padding: 50px;'>");

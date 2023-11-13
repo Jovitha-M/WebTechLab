@@ -1,7 +1,6 @@
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
-
 public class login1 extends HttpServlet {
    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
      try {
@@ -21,8 +20,7 @@ public class login1 extends HttpServlet {
         session.setAttribute("login_name",in_data);  
         pwriter.print("<a href='loginsess2'>Go to the next page</a>");
         pwriter.println("</body></html>");  
-        pwriter.print("</form>");  
-        
+        pwriter.print("</form>");         
         pwriter.close();
     } catch(Exception exp) {
        System.out.println(exp);

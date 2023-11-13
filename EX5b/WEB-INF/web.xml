@@ -1,10 +1,8 @@
-
 <web-app>
     <servlet>
         <servlet-name>contactservlet</servlet-name>
         <servlet-class>contact</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>contactservlet</servlet-name>
         <url-pattern>/contactservlet</url-pattern>
