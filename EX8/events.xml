@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EventList>
+    <events>
+        <year>2023</year>
+        <event1>Israel-Palestine War</event1>
+        <event2>Asian Games</event2>
+        <event3>King Charles Coronation</event3>
+    </events>
+    <events>
+        <year>2022</year>
+        <event1>Russia-Ukrain War</event1>
+        <event2>Sri Lanka economic crisis</event2>
+        <event3>Queen Elizabeth death</event3>
+    </events>
+    <events>
+        <year>2021</year>
+        <event1>President Joe Biden</event1>
+        <event2>Tokyo Olympics</event2>
+        <event3>Taliban Rule</event3>
+    </events>
+</EventList>
